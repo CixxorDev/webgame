@@ -15,8 +15,8 @@ function maxPoints(){
         const player = "Vous";
         userScore_span.innerHTML = userScore;
         computerScore_span.innerHTML = computerScore;
-        result_div.innerHTML = `${player} avez gagnez ! <br> Redirection dans 3 secondes...`.fontcolor("green");
-        setTimeout(function(){ document.location.href="loose.html"; }, 3000);
+        result_div.innerHTML = `${player} avez gagnez !`.fontcolor("green");
+        setTimeout(function(){ document.location.href="loose.html"; }, 2000);
     }
     if (computerScore == 5){
         userScore = 0;
@@ -24,8 +24,8 @@ function maxPoints(){
         const comp = "L'ordinateur";
         userScore_span.innerHTML = userScore;
         computerScore_span.innerHTML = computerScore;
-        result_div.innerHTML = `${comp} a gagné ! <br> Redirection dans 3 secondes...`.fontcolor("red");
-        setTimeout(function(){ document.location.href="loose.html"; }, 3000);
+        result_div.innerHTML = `${comp} a gagné !`.fontcolor("red");
+        setTimeout(function(){ document.location.href="loose.html"; }, 2000);
     }
 }
 
