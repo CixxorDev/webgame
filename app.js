@@ -51,6 +51,7 @@ function win(userChoice, computerChoice) {
     document.getElementById(userChoice).classList.add('green-win');
     setTimeout(function(){ document.getElementById(userChoice).classList.remove('green-win')}, 1000);
     maxPoints();
+
 }
 
 function lose(userChoice, computerChoice) {
@@ -78,19 +79,22 @@ function game(userChoice) {
         case "rs":
         case "pr":
         case "sp":
-        win(userChoice, computerChoice);
+        result_div.innerHTML = `Les joueurs jouent...`;
+        setTimeout(function() {win(userChoice, computerChoice);}, 2000);
         console.log("USER WINS.");
         break;
         case "rp":
         case "ps":
         case "sr":
-        lose(userChoice, computerChoice);
+        result_div.innerHTML = `Les joueurs jouent...`;
+        setTimeout(function() {lose(userChoice, computerChoice);}, 2000);
         console.log("USER LOSES.");
         break;
         case "rr":
         case "pp":
         case "ss":
-        draw(userChoice, computerChoice);
+        result_div.innerHTML = `Les joueurs jouent...`;
+        setTimeout(function() {draw(userChoice, computerChoice);}, 2000);
         console.log("ITS A DRAW.");
         break;
     }
